@@ -35,4 +35,12 @@ input {
 a {
   color: inherit;
 }
+
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
 /*# sourceMappingURL=base.css.map */

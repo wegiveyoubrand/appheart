@@ -2,10 +2,11 @@ let nav = document.querySelector("nav"),
   navList = document.querySelector(".nav__list"),
   navToggle = document.querySelector(".nav__toggle");
 
-const arrays = [navList, navToggle];
+const arrays = [nav, navList, navToggle];
 
 navToggle.addEventListener("click", () => {
   navToggle.classList.toggle("active");
+  navList.classList.toggle("active");
 });
 
 const activateMobileView = () => {
