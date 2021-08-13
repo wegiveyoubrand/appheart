@@ -1,0 +1,22 @@
+@import "./5.utilities/all";
+
+@import "./3.layouts/all";
+
+/* -- Custom Global --*/
+
+body {
+  font-family: $pri-font;
+}
+
+button {
+  padding: 1rem 1.8rem;
+  border-radius: 999px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  i {
+    margin-left: 0.75rem;
+  }
+}
