@@ -93,6 +93,12 @@
 
 .nav {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav__list {
@@ -101,6 +107,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.nav__list.mobile {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
 }
 
 .nav__item {
@@ -157,9 +168,13 @@
   text-decoration: none;
 }
 
-.nav.mobile {
-  -webkit-transform: scaleY(0);
-          transform: scaleY(0);
+.nav__toggle {
+  display: none;
+  font-size: 1.5rem;
+}
+
+.nav__toggle.mobile {
+  display: block;
 }
 
 /* -- Custom Global --*/
