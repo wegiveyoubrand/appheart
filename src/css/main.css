@@ -70,6 +70,10 @@
   border-radius: 15px;
   overflow: hidden;
   background-color: #f2f2f2;
+  -webkit-transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: -webkit-box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
 }
 
 .profiles .profile__image {
@@ -138,15 +142,15 @@
   color: #000;
 }
 
-.profiles .profile::after {
+.profiles .profile--back {
   position: absolute;
   content: "";
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: #fff;
   z-index: 4;
-  background-color: #0b276f;
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
@@ -157,9 +161,73 @@
           transform: translateY(100%);
 }
 
-.profiles .profile.contact::after {
+.profiles .profile--back_close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.profiles .profile--front {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  opacity: 1;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.profiles .profile.contact {
+  -webkit-box-shadow: 0 0 15px rgba(11, 39, 111, 0.111);
+          box-shadow: 0 0 15px rgba(11, 39, 111, 0.111);
+}
+
+.profiles .profile.contact .profile--front {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+}
+
+.profiles .profile.contact .profile--back {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.profiles .profile__contact {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profiles .profile__contact > div {
+  cursor: pointer;
+}
+
+.profiles .profile__contact > div:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.profiles .profile__contact > div:hover i, .profiles .profile__contact > div:focus-within i {
+  color: rosybrown;
+}
+
+.profiles .profile__contact i {
+  font-size: 2rem;
+  color: #0b276f;
 }
 
 .modal {

@@ -10,4 +10,10 @@ profiles.forEach((profile) => {
 
     profile.classList.add("contact");
   });
+  profile
+    .querySelector(".profile--back_close")
+    .addEventListener("click", (e) => {
+      e.preventDefault();
+      profile.classList.remove("contact");
+    });
 });
