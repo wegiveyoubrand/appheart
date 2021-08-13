@@ -28,17 +28,46 @@
   </head>
   <body>
     <div class="container">
-      <section class="section hero">
-        <div class="section__content">
-          <h1>Welcome to Appheart - Official Website</h1>
-          <h3>The development on this site is in active progress still</h3>
-          <div class="action-user">
-            <button>Learn more </button>
-            <button>Explore <i class="fas fa-long-arrow-alt-right"></i></button>
-          </div>
-          <div class="tagline">😊Discover Happiness</div>
+      <div class="modal active">
+        <div class="modal__close closeModalToggle">
+          <i class="fas fa-times"></i>
         </div>
-      </section>
+
+        <div class="modal__content">
+          <section class="section hero">
+            <div class="section__content">
+              <h1>Welcome to Appheart - Official Website</h1>
+              <h3>The development on this site is in active progress still</h3>
+              <div class="action-user">
+                <button>Learn more</button>
+                <button class="closeModalToggle">
+                  Explore <i class="fas fa-long-arrow-alt-right"></i>
+                </button>
+              </div>
+              <div class="tagline">😊Discover Happiness</div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <header class="header">
+        <div class="brand">Appheart</div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="" class="nav__link">Our Company</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">The Team</a>
+            </li>
+            <li class="nav__item">
+              <a href="" class="nav__link">Resources</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
     </div>
+
+    <script src="./src/index.js" type="module"></script>
   </body>
 </html>
