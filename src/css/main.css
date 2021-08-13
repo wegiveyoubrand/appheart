@@ -55,13 +55,87 @@
   gap: 1rem;
 }
 
+.profiles {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px 5%;
+}
+
+.profiles .profile {
+  min-height: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #f2f2f2;
+}
+
+.profiles .profile__image {
+  position: relative;
+  height: 150px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profiles .profile__image:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+  background-color: #061741;
+}
+
+.profiles .profile__image .image {
+  position: relative;
+  z-index: 2;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 40px;
+  background-color: #fff;
+}
+
+.profiles .profile__desc, .profiles .profile__reach {
+  padding: 20px;
+}
+
+.profiles .profile__skill {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.profiles .profile button {
+  font-size: 12px;
+  background-color: #0b276f;
+  padding: 12px;
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .modal {
   position: fixed;
   height: 100vh;
   width: 100vw;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
   -webkit-transition: -webkit-transform .5s ease;
@@ -231,8 +305,8 @@
           align-items: center;
   text-align: center;
   padding: 20px 5%;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   background: #061741;
   color: #fff;
   -webkit-transform: scaleY(0);
@@ -251,6 +325,22 @@
 .nav.mobile .nav__item {
   height: 60px;
   margin-right: 0;
+  margin-bottom: 20px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.nav.mobile .nav__item.active {
+  opacity: 1;
+}
+
+.nav.mobile .nav__item::after {
+  background-color: #fff;
+}
+
+.nav.mobile .nav__item:focus-within, .nav.mobile .nav__item:hover {
+  margin-top: 0;
 }
 
 /* -- Custom Global --*/
