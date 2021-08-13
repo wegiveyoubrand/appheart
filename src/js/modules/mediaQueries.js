@@ -16,6 +16,16 @@ const activateLaptopView = () => {
   });
 };
 
+// On Windows Load
+window.addEventListener("load", function () {
+  if (window.innerWidth > 680) {
+    activateLaptopView();
+  } else {
+    activateMobileView();
+  }
+});
+
+// On Windows Resize
 window.addEventListener("resize", function () {
   if (window.innerWidth > 680) {
     activateLaptopView();
