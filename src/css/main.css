@@ -55,6 +55,11 @@
   gap: 1rem;
 }
 
+.section__title {
+  padding: 20px 5%;
+  text-align: center;
+}
+
 .profiles {
   display: -ms-grid;
   display: grid;
