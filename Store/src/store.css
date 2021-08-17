@@ -1,0 +1,41 @@
+#store {
+  height: 100%;
+  width: 100%;
+}
+
+#store .hero {
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#store .hero h1 {
+  width: 100% !important;
+  font-weight: 300;
+}
+#store .hero .call-to-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#store .hero .call-to-actions button {
+  flex-basis: 100%;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 620px) {
+  #store .hero {
+    flex-direction: initial;
+    padding: 5%;
+  }
+  #store .hero h1 {
+    width: 70%;
+  }
+}
