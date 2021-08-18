@@ -25,7 +25,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsla(240, 67%, 20%, 0.2);
+  background-color: hsla(240, 75%, 25%, 0.888);
+  color: #fff;
   padding: 1rem;
   border-radius: 50%;
   height: 3rem;
@@ -39,7 +40,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsla(240, 67%, 20%, 0.2);
+  background-color: hsla(240, 67%, 20%, 1);
+  color: #f3f3f3;
+  opacity: 0.9;
   padding: 1rem;
   border-radius: 50%;
   height: 3rem;
@@ -137,7 +140,10 @@
   justify-content: space-between;
   align-items: center;
   height: 3rem;
+  padding: 0 5%;
   background-color: #fff;
+  box-shadow: 0 2px hsla(240, 67%, 20%, 0.2);
+  font-size: 12px;
 }
 
 #store .breadcrumb .arrange-styles {
