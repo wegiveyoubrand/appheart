@@ -21,25 +21,78 @@
     <link rel="stylesheet" href="../src/css/base.css" />
     <link rel="stylesheet" href="./src/store.css" />
 
-    <title>Appheart Store - integrable Store</title>
+    <title>Appheart Store - Integrable Store</title>
   </head>
-  <body id="store">
-    <header class="header"></header>
-    <div class="hero">
-      <h1>
-        Appheart Store is an integrable platform connecting businesses to get
-        goods / services as a product delivered to customers / end-users in
-        quality measures.
-      </h1>
-      <div class="call-to-actions">
-        <button
-          onclick="location.href='https://appheart-store.whats.bz/#/store'"
-        >
-          Explore
-        </button>
-        <button disabled>Be a Verified Vendor</button>
-        <button disabled>Register your Business</button>
+  <body id="store" class="">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <img src="" alt=" " class="brand__logo" />
+        <p class="brand__text">Appheart</p>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <nav__item>
+            <i class="fa fa-search"></i>
+          </nav__item>
+          <nav__item>
+            <a href="#" class="nav__link">
+              <nav__item--text>Verified Vendors</nav__item--text>
+            </a>
+          </nav__item>
+          <nav__item>
+            <a href="#" class="nav__link">
+              <nav__item--text>Registered Businesses</nav__item--text>
+            </a>
+          </nav__item>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumb">
+      <div class=""></div>
+      <div class="arrange-styles">
+        <div class="arrange-style">1</div>
+        <div class="arrange-style">2</div>
       </div>
     </div>
+
+    <!-- View Setups -->
+    <!-- Scroll to Top -->
+    <div class="scroll-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+    <div class="navigation-view">
+      <i class="fa fa-sync"></i>
+    </div>
+    <main>
+      <section>
+        <div class="section-title">Categories</div>
+        <div class="product-categories"></div>
+      </section>
+
+      <section>
+        <!-- Phones -->
+        <div class="section-title">Phones</div>
+        <div class="products phones"></div>
+      </section>
+
+      <section>
+        <!-- Books -->
+        <div class="section-title">Books</div>
+        <div class="products books"></div>
+      </section>
+
+      <!-- Modal for Product Details -->
+      <div class="product-modal">
+        <div class="close-modal">
+          <i class="fa fa-times"></i>
+        </div>
+        <div class="modal"></div>
+      </div>
+    </main>
+
+    <script src="./src/js/modules/products.js"></script>
   </body>
 </html>
