@@ -58,6 +58,10 @@
 .section__title {
   padding: 20px 5%;
   text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
 }
 
 .profiles {
@@ -236,6 +240,74 @@
   color: #111155;
 }
 
+.projects {
+  padding: 2rem 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  overflow-x: scroll;
+}
+
+.project {
+  position: relative;
+  height: 400px;
+  min-width: 300px;
+  width: 90%;
+  max-width: 500px;
+  overflow: hidden;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.project::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #111155;
+  z-index: -1;
+  mix-blend-mode: overlay;
+}
+
+.project .img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  inset: 0;
+  z-index: -2;
+}
+
+.project .content {
+  padding: 1.2rem;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project .content h1,
+.project .content h2,
+.project .content h3 {
+  line-height: 1.2;
+}
+
+.project button {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
 .apps {
   display: -ms-grid;
   display: grid;
@@ -256,14 +328,32 @@
   text-decoration: none;
 }
 
+main {
+  min-height: 100vh;
+}
+
 footer {
   background-color: #111155;
   color: #f7f0ff;
   padding: 2rem;
 }
 
+footer .grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 1rem;
+}
+
 footer .copyright {
   text-align: center;
+}
+
+footer a {
+  font-size: 0.85rem;
+  margin-right: 1rem;
 }
 
 .modal {
@@ -479,6 +569,13 @@ footer .copyright {
 
 .nav.mobile .nav__item:focus-within, .nav.mobile .nav__item:hover {
   margin-top: 0;
+}
+
+.paymentIntegrationPage .statement {
+  width: 100%;
+  max-width: 920px;
+  padding: 2rem;
+  margin: 0 auto;
 }
 
 /* -- Custom Global --*/
