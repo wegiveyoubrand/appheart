@@ -256,6 +256,16 @@
   text-decoration: none;
 }
 
+footer {
+  background-color: #111155;
+  color: #f7f0ff;
+  padding: 2rem;
+}
+
+footer .copyright {
+  text-align: center;
+}
+
 .modal {
   position: fixed;
   height: 100vh;
