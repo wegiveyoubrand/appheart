@@ -236,6 +236,26 @@
   color: #111155;
 }
 
+.apps {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 20px 5%;
+}
+
+.app {
+  padding: 20px;
+  background-color: #111155;
+  color: #f7f0ff;
+  border-radius: 8px;
+}
+
+.app a {
+  text-decoration: none;
+}
+
 .modal {
   position: fixed;
   height: 100vh;

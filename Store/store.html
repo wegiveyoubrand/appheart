@@ -26,29 +26,29 @@
   <body id="store" class="">
     <!-- Header -->
     <header class="header">
-      <div class="brand">
-        <img src="" alt=" " class="brand__logo" />
-        <p class="brand__text">Appheart</p>
+      <div class="menu nav-open">
+        <i class="fa fa-bars"></i>
       </div>
-      <nav class="nav">
-        <ul class="nav__list">
-          <nav__item>
-            <i class="fa fa-search"></i>
-          </nav__item>
-          <nav__item>
-            <a href="#" class="nav__link">
-              <nav__item--text>Verified Vendors</nav__item--text>
-            </a>
-          </nav__item>
-          <nav__item>
-            <a href="#" class="nav__link">
-              <nav__item--text>Registered Businesses</nav__item--text>
-            </a>
-          </nav__item>
-        </ul>
-      </nav>
+      <div class="brand">
+        <p class="brand__text">Appheart Store</p>
+      </div>
+      <div class="cart">
+        <i class="fa fa-cart"></i>
     </header>
-
+  </div>
+  <nav class="nav">
+    <div class="nav-close">
+      <i class="fa fa-times"></i>
+    </div>
+    <ul class="nav__list">
+      <li class="nav-title">Product Categories</li>
+      <li><a href="">Phones</a></li>
+      <li><a href="">Laptops</a></li>
+      <li><a href="">Gadgets</a></li>
+      <li><a href="">Accessories</a></li>
+    </ul>
+  </nav>
+    
     <!-- Breadcrumbs -->
     <div class="breadcrumb">
       <div class=""></div>
@@ -66,11 +66,7 @@
       <i class="fa fa-sync"></i>
     </div>
     <main>
-      <section>
-        <div class="section-title">Categories</div>
-        <div class="product-categories"></div>
-      </section>
-
+     
       <section>
         <!-- Phones -->
         <div class="section-title">Phones</div>
@@ -93,6 +89,8 @@
     </main>
 
     <script src="./src/js/modules/products.js"></script>
+    <script src="./src/js/modules/productFilter.js"></script>
     <script src="./src/js/modules/scroll-to-top.js"></script>
+    <script src="./src/js/modules/nav.js"></script>
   </body>
 </html>

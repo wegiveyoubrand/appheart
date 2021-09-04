@@ -23,39 +23,89 @@ const productCategories = [
 
 const phones = [
   {
-    name: "Iphone 12 Pro Max",
-    price: "204,000",
+    name: "Infonix Smart 5",
+    price: "48,000",
     image: "iphone-12.jpg",
+    desc: "The iPhone 12 features a 6.1-inch (15 cm) display with Super Retina XDR OLED technology at a resolution of 2532×1170 pixels and a pixel density of about 460 ppi. ",
+  },
+  {
+    name: "Iphone 12 Pro Max",
+    price: "615,000",
+    image: "iphone-12.jpg",
+    desc: "The iPhone 12 features a 6.1-inch (15 cm) display with Super Retina XDR OLED technology at a resolution of 2532×1170 pixels and a pixel density of about 460 ppi. ",
+  },
+  {
+    name: "Infinix Hot 10",
+    price: "47,000",
+    image: "iphone-12.jpg",
+    desc: "The iPhone 12 features a 6.1-inch (15 cm) display with Super Retina XDR OLED technology at a resolution of 2532×1170 pixels and a pixel density of about 460 ppi. ",
+  },
+  {
+    name: "Infinix Hot 10i",
+    price: "52,000",
+    image: "iphone-12.jpg",
+    desc: "The iPhone 12 features a 6.1-inch (15 cm) display with Super Retina XDR OLED technology at a resolution of 2532×1170 pixels and a pixel density of about 460 ppi. ",
   },
   {
     name: "Tecno Pop 4",
     price: "204,000",
     image: "iphone-12.jpg",
+    desc: "It's a 2GB RAM phone running on Android 10 Go Edition, optimized to help the phone operate smoothly.Comes with a massive 5000mAh battery and it looks more compact. ",
   },
   {
-    name: "Tecno Spark 7",
-    price: "204,000",
+    name: "iTel P36",
+    price: "37,500",
     image: "iphone-12.jpg",
+    desc: "It's a 2GB RAM phone running on Android 10 Go Edition, optimized to help the phone operate smoothly.Comes with a massive 5000mAh battery and it looks more compact. ",
+  },
+  {
+    name: "iTel P37",
+    price: "40,500",
+    image: "iphone-12.jpg",
+    desc: "It's a 2GB RAM phone running on Android 10 Go Edition, optimized to help the phone operate smoothly.Comes with a massive 5000mAh battery and it looks more compact. ",
+  },
+
+  {
+    name: "Tecno Spark 7",
+    price: "49,500",
+    image: "iphone-12.jpg",
+    desc: "The latest Tecno Spark 7 has been designed for excellent battery life & smooth functioning.",
   },
   {
     name: "Oppo A15",
     price: "204,000",
     image: "iphone-12.jpg",
+    desc: "The phone comes with a 6.52-inch display with a resolution of 720x1600 pixels and an aspect ratio of 20:9. Oppo A15 is powered by an octa-core MediaTek Helio P35 (MT6765) processor.",
+  },
+  {
+    name: "iTel S16",
+    price: "26,000",
+    image: "iphone-12.jpg",
+    desc: "It's a 2GB RAM phone running on Android 10 Go Edition, optimized to help the phone operate smoothly.Comes with a massive 5000mAh battery and it looks more compact. ",
+  },
+  {
+    name: "Tecno Pop 2F",
+    price: "39,000",
+    image: "iphone-12.jpg",
+    desc: "TECNO Pop 2 F is powered by the Mediatek MT6580M Quad-core 1.3 GHz Cortex-A7 processor. The smartphone comes with a 5.45 inches IPS LCD capacitive touchscreen and 480 x 960 pixels resolution.",
+  },
+  {
+    name: "Tecno Camon 17",
+    price: "74,000",
+    image: "iphone-12.jpg",
+    desc: "The Tecno Camon 17 runs HiOS 7.6 is based on Android 11 and packs 128GB of inbuilt storage. The Tecno Camon 17 measures 164.50 x 76.50 x 8.95mm (height x width x thickness) ",
   },
   {
     name: "iTEL S15",
     price: "204,000",
     image: "iphone-12.jpg",
+    desc: "The iTel S15 is powered by a 1.3GHz Quad-core Spreadtrum SC7731E along with ARM Mali T820 MP1, 1/2GB of RAM and a 16/32GB internal storage, expandable up to 64 GB via microSD card.",
   },
   {
-    name: "Tecno Pop 2F",
-    price: "204,000",
+    name: "Tecno Pop 3",
+    price: "30,500",
     image: "iphone-12.jpg",
-  },
-  {
-    name: "Tecno Camon 17",
-    price: "204,000",
-    image: "iphone-12.jpg",
+    desc: "The iTel S15 is powered by a 1.3GHz Quad-core Spreadtrum SC7731E along with ARM Mali T820 MP1, 1/2GB of RAM and a 16/32GB internal storage, expandable up to 64 GB via microSD card.",
   },
 ];
 
@@ -104,7 +154,7 @@ const productCategoriesContainer = document.querySelector(
 const productCategoriesContent = `${productCategories
   .map((productCategory) => {
     return `
-      <div class ="product-category card">
+      <div class ="product-category card" data-filter= '${productCategory.name}'>
         <p>${productCategory.name}</p>
       </div>`;
   })
@@ -113,15 +163,25 @@ const productCategoriesContent = `${productCategories
 const phonesContainerContent = `${phones
   .map((phone) => {
     return `
-      <div class="product card data-rel="phone"">
+      <div class="product card data-item="phone"">
         <div class="over-lay">
           <button>View details</button></div>
         <div class="product__image">
           <img src="${phones_root}/${phone.image}" alt="">
         </div>
-        <div class="product-name">
-            ${phone.name}
-        </div>
+    <div class="product__info">
+      <div class="product__name">
+        ${phone.name}
+      </div>
+      <div class="product__desc">
+        ${phone.desc}
+      </div>
+      <div class="product__price">
+      &#8358;&nbsp;${phone.price}
+      </div>
+    </div>
+
+       
     </div>`;
   })
   .join("")}`;
@@ -143,7 +203,8 @@ const booksContainerContent = `${books
   .join("")}`;
 
 // Exporting to HTML
-productCategoriesContainer.innerHTML = productCategoriesContent;
+//
+// productCategoriesContainer.innerHTML = productCategoriesContent;
 phonesContainer.innerHTML = phonesContainerContent;
 booksContainer.innerHTML = booksContainerContent;
 
