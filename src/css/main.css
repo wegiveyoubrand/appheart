@@ -324,8 +324,16 @@
   border-radius: 8px;
 }
 
+.app h1 {
+  margin-bottom: 1rem;
+}
+
 .app a {
   text-decoration: none;
+}
+
+.app ul {
+  padding-left: 1rem;
 }
 
 main {
